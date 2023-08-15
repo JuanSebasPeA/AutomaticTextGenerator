@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='./css/style.css')}}"
+    />
+    <title>Violencia de Género</title>
+  </head>
+
+  <script src=""></script>
+  <body>
+    <!-- contenedor de los casos -->
+    <div class="container">
+      <!-- muestro solo el primer elemento de data -->
+      <!--{{data[0].fecha}}-->
+
+      <div class="buttons">
+        <h2 href="#" class="boton1">
+          Conoce más sobre violencia de género en México
+        </h2>
+        <!-- Botones de la página principal -->
+        <a href="casoViolencia.html" class="boton2">
+          <b>Conoce más sobre los feminicidios en México</b>
+        </a>
+        <!-- vinculo a la página casoBrecha.html -->
+        <a href="casoBrecha.html" class="boton3">
+          <b>Casos sobre brecha salarial por género</b>
+        </a>
+        <!-- vinculo a la página casoLaboral.html -->
+        <a href="casoLaboral.html" class="boton4">
+          <b>Casos sobre limitaciones laborales por género</b>
+        </a>
+      </div>
+    </div>
+
+    <script src="{{url_for('static', filename='./js/index.js')}}"></script>
+  </body>
+</html>

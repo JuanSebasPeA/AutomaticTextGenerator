@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='./css/style.css')}}"
+    />
+    <title>Diferencia de empleos</title>
+  </head>
+  <body>
+    <div class="container-caso">
+      <h1>Diferencia de empleos</h1>
+      <a class="regresar" href="index.html">Volver</a>
+      <form action="">
+        <button type="submit">OTRO</button>
+      </form>
+      <!-- carta para mostrar el texto de la plantilla -->
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Caso</h5>
+          <p>{{ plantilla }}</p>
+          <p>{{epilogo}}</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{url_for('static', filename='./js/index.js')}}"></script>
+  </body>
+</html>

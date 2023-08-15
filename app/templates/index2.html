@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='./css/index.css')}}"
+    />
+    <title>Violencia de Género</title>
+  </head>
+  <body>
+    <h1>BRECHA SALARIAL </h1>
+    <ul>
+      {% for dato in data %}
+      <li>
+        <h2>{{ dato.fecha }}</h2>
+        <!-- ahora se muestra el dato uno y el dato2 del diccionario -->
+        <p>{{ dato.ranking }}</p>
+        <p>{{ dato.index }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+    <h1>FEMINICIDIOS</h1>
+    <ul>
+        {% for datoViolencia in dataViolencia %}
+        <li>
+          <h2>{{ datoViolencia.year }}</h2>
+          <!-- ahora se muestra el dato uno y el dato2 del diccionario -->
+          <p>{{ datoViolencia.case }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+      <h1>DIFERENCIA LABORAL</h1>
+    <ul>
+        {% for dataEmpleo in dataEmpleos %}
+        <li>
+          <h2>{{dataEmpleo.trimestre}}</h2>
+          <p>{{dataEmpleo.total}}</p>
+          <p>{{dataEmpleo.hombres}}</p>
+          <p>{{dataEmpleo.mujeres}}</p>
+        </li>
+        {% endfor %}
+      </ul>
+  </body>
+</html>
